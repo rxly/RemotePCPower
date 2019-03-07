@@ -3,7 +3,7 @@ import time,json
 import hmac
 import os
 
-device_name = "PC"
+device_name = "computer"
 device_secret = "ZH0UeXXXXXXXXXXXXXXX8MisgFxD4Elz"
 product_key = "a1gXXXXXqNV"
 
