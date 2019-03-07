@@ -26,6 +26,7 @@
 #define PRODUCT_SECRET          "a4dtXXXXXXXXdlwP"
 #define DEVICE_NAME             "NodeMCU"
 #define DEVICE_SECRET           "9L4CSU2XXXXXXXXXXnMeYo7bZWIApqu0"
+#define PC_MAC_ADDR             "\x30\x9c\x23\xe3\xf2\x5f"
       
 /* These are pre-defined topics */
 #define TOPIC_UPDATE            "/"PRODUCT_KEY"/"DEVICE_NAME"/update"
@@ -138,7 +139,7 @@ void send_magic_package(void *paras){
     memset(send_buf,0,sizeof(send_buf));
     memset(send_buf,0xff,6);
     for(idx = 0; idx < 16; idx++){
-        memcpy(send_buf+6*(idx+1),"\x30\x9c\x23\xeb\xf4\x7f",6);
+        memcpy(send_buf+6*(idx+1),PC_MAC_ADDR,6);
     }
     printf("init send buf Donw\n");
 
