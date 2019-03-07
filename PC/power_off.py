@@ -49,16 +49,14 @@ client.connect(url,port,60)
 client.loop_start()
 
 
+time.sleep(3)
+print("subscribe %s"%topic)
+client.subscribe(topic,1)
+# print("subscribe %s" % topic_state)
+# client.subscribe(topic_state, 1)
 
 while True:
-    time.sleep(3)
-    print("subscribe %s"%topic)
-    client.subscribe(topic,1)
-    # print("subscribe %s" % topic_state)
-    # client.subscribe(topic_state, 1)
-
-    while True:
-        time.sleep(99999)
+    time.sleep(99999)
     # client.publish(topic,payload='{"power_on":%d}'%(1),qos=0)
     # val += 10
     # time.sleep(1)
